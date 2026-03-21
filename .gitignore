@@ -1,0 +1,4 @@
+bin/
+/wifi-scan
+*.exe
+vendor/
