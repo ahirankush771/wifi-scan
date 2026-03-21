@@ -1,0 +1,16 @@
+# Binaries
+bin/
+*.exe
+
+# Vendor directory
+vendor/
+
+# Go build cache
+*.test
+*.out
+
+# IDE / editor files
+.vscode/
+.idea/
+*.swp
+*.swo
