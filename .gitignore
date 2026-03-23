@@ -1,0 +1,15 @@
+# Binaries
+bin/
+wifi-scan
+wifi-scan.exe
+
+# Vendor directory
+vendor/
+
+# Go build cache artifacts
+*.test
+*.out
+
+# OS-specific files
+.DS_Store
+Thumbs.db
