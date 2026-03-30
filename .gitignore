@@ -1,6 +1,7 @@
 # Binaries
 bin/
 *.exe
+wifi-scan
 
 # Vendor directory
 vendor/
