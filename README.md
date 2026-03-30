@@ -48,7 +48,7 @@ Flags:
   -i, --interface string   Network interface to use (e.g. eth0, wlan0)
   -r, --range string       IP range in CIDR notation (e.g. 192.168.1.0/24)
   -o, --output string      Output format: table, json, csv (default "table")
-  -w, --workers int        Number of concurrent workers (default 50)
+  -w, --workers int        Number of concurrent workers (default 100)
   -t, --timeout duration   Timeout per host probe (default 500ms)
   -v, --verbose            Enable verbose logging
       --version            Print version and exit
@@ -58,29 +58,21 @@ Flags:
 
 ## Examples
 
+> **Note:** ARP scanning and raw ICMP sockets require elevated privileges. Run with `sudo` on Linux/macOS.
+
 **Scan default interface (auto-detected):**
 ```bash
-sudo wifi-scan
+wifi-scan
 ```
 
-**Scan a specific interface:**
+**Scan a specific interface with JSON output:**
 ```bash
-sudo wifi-scan -i wlan0
+wifi-scan --interface wlan0 --output json
 ```
 
-**Scan a custom IP range:**
+**Scan a custom IP range and save to CSV:**
 ```bash
-sudo wifi-scan -r 192.168.0.0/24
-```
-
-**Output as JSON:**
-```bash
-sudo wifi-scan -i eth0 -o json
-```
-
-**Output as CSV:**
-```bash
-sudo wifi-scan -r 10.0.0.0/24 -o csv > results.csv
+wifi-scan --range 192.168.1.0/24 --output csv > devices.csv
 ```
 
 **Verbose mode with custom timeout and workers:**
